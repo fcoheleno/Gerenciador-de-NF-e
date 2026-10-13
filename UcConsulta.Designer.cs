@@ -43,6 +43,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtClienteNome = new Guna.UI2.WinForms.Guna2TextBox();
             txtCnpj = new Guna.UI2.WinForms.Guna2TextBox();
@@ -54,17 +56,19 @@
             txtCaminho = new Guna.UI2.WinForms.Guna2TextBox();
             btnSelectCertificado = new Guna.UI2.WinForms.Guna2Button();
             btnViewSenha = new Guna.UI2.WinForms.Guna2Button();
-            btnEnviar = new Guna.UI2.WinForms.Guna2Button();
+            btnCadastrar = new Guna.UI2.WinForms.Guna2Button();
+            labelUf = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtUf = new Guna.UI2.WinForms.Guna2TextBox();
             SuspendLayout();
             // 
             // guna2HtmlLabel1
             // 
             guna2HtmlLabel1.BackColor = Color.Transparent;
-            guna2HtmlLabel1.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel1.ForeColor = Color.White;
-            guna2HtmlLabel1.Location = new Point(68, 55);
+            guna2HtmlLabel1.Location = new Point(58, 91);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(279, 27);
+            guna2HtmlLabel1.Size = new Size(374, 34);
             guna2HtmlLabel1.TabIndex = 0;
             guna2HtmlLabel1.Text = "Preencha os campos necessários";
             // 
@@ -231,31 +235,65 @@
             btnViewSenha.TabIndex = 10;
             btnViewSenha.Click += btnViewSenha_Click;
             // 
-            // btnEnviar
+            // btnCadastrar
             // 
-            btnEnviar.BorderRadius = 10;
-            btnEnviar.CustomizableEdges = customizableEdges13;
-            btnEnviar.DisabledState.BorderColor = Color.DarkGray;
-            btnEnviar.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnEnviar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnEnviar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnEnviar.FillColor = Color.Teal;
-            btnEnviar.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnEnviar.ForeColor = Color.White;
-            btnEnviar.Location = new Point(440, 427);
-            btnEnviar.Name = "btnEnviar";
-            btnEnviar.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            btnEnviar.Size = new Size(224, 50);
-            btnEnviar.TabIndex = 11;
-            btnEnviar.Text = "Fazer solicitação\r\n";
-            btnEnviar.Click += btnEnviar_Click;
+            btnCadastrar.BorderRadius = 10;
+            btnCadastrar.CustomizableEdges = customizableEdges13;
+            btnCadastrar.DisabledState.BorderColor = Color.DarkGray;
+            btnCadastrar.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnCadastrar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnCadastrar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnCadastrar.FillColor = Color.Teal;
+            btnCadastrar.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCadastrar.ForeColor = Color.White;
+            btnCadastrar.Location = new Point(434, 414);
+            btnCadastrar.Name = "btnCadastrar";
+            btnCadastrar.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnCadastrar.Size = new Size(226, 63);
+            btnCadastrar.TabIndex = 11;
+            btnCadastrar.Text = "Cadastrar informações";
+            btnCadastrar.Click += btnEnviar_Click;
+            // 
+            // labelUf
+            // 
+            labelUf.BackColor = Color.Transparent;
+            labelUf.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelUf.ForeColor = Color.White;
+            labelUf.Location = new Point(394, 272);
+            labelUf.Name = "labelUf";
+            labelUf.Size = new Size(208, 27);
+            labelUf.TabIndex = 13;
+            labelUf.Text = "Unidade federativa (Uf):";
+            // 
+            // txtUf
+            // 
+            txtUf.BorderRadius = 8;
+            txtUf.CustomizableEdges = customizableEdges15;
+            txtUf.DefaultText = "";
+            txtUf.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtUf.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtUf.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtUf.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtUf.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtUf.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtUf.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtUf.Location = new Point(394, 306);
+            txtUf.Margin = new Padding(4);
+            txtUf.Name = "txtUf";
+            txtUf.PlaceholderText = "Digite aqui...";
+            txtUf.SelectedText = "";
+            txtUf.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            txtUf.Size = new Size(295, 49);
+            txtUf.TabIndex = 12;
             // 
             // UcConsulta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            Controls.Add(btnEnviar);
+            Controls.Add(labelUf);
+            Controls.Add(txtUf);
+            Controls.Add(btnCadastrar);
             Controls.Add(btnViewSenha);
             Controls.Add(btnSelectCertificado);
             Controls.Add(txtCaminho);
@@ -285,6 +323,8 @@
         private Guna.UI2.WinForms.Guna2TextBox txtCaminho;
         private Guna.UI2.WinForms.Guna2Button btnSelectCertificado;
         private Guna.UI2.WinForms.Guna2Button btnViewSenha;
-        private Guna.UI2.WinForms.Guna2Button btnEnviar;
+        private Guna.UI2.WinForms.Guna2Button btnCadastrar;
+        private Guna.UI2.WinForms.Guna2HtmlLabel labelUf;
+        private Guna.UI2.WinForms.Guna2TextBox txtUf;
     }
 }

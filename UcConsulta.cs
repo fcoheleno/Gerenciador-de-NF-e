@@ -116,65 +116,7 @@ namespace Gerenciador_de_NF_e
 
         //private bool Verificador() { }
 
-        static async RealizarSolicitacao(string CnpjCliente, string certificadoCaminho, string senhaCertificado)
-        {
-            var certificadoCliente = new X509Certificate2(certificadoCaminho);
-
-            var handler = new HttpClientHandler();
-            handler.ClientCertificates.Add(certificadoCliente);
-
-            using var client = new HttpClient(handler);
-            string url = "https://hom1.nfe.fazenda.gov.br/NFeDistribuicaoDFe/NFeDistribuicaoDFe.asmx";
-            string tpAmb = "2";
-            string codigoUf = "23";
-
-            //tenho q fazer uma lógica: ver primeiramente se o cnpj q o cara digitou é igual ao do certificado que ele mandou!
-
-            string nsu = "000000000000000";
-
-            string xmlConsulta = $@"<distDFeInt xmlns=""http://www.portalfiscal.inf.br/nfe"" versao=""1.01"">
-          <tpAmb>{tpAmb}</tpAmb>
-          <cUFAutor>{codigoUf}</cUFAutor>
-          <CNPJ>{CnpjCliente}</CNPJ>
-          <distNSU>
-            <ultNSU>{nsu}</ultNSU>
-          </distNSU>
-          </distDFeInt>";
-
-            string envelope = $@"<soap12:Envelope xmlns:soap12=""http://www.w3.org/2003/05/soap-envelope"" xmlns:nfe=""http://www.portalfiscal.inf.br/nfe/wsdl/NFeDistribuicaoDFe"">
-          <soap12:Header>
-            <nfe:nfeCabecMsg>
-              <nfe:cUFAutor>23</nfe:cUFAutor>
-              <nfe:versaoDados>1.01</nfe:versaoDados>
-            </nfe:nfeCabecMsg>
-          </soap12:Header>
-          <soap12:Body>
-            <nfe:nfeDistDFeInteresse>
-              <nfe:nfeDadosMsg>{xmlConsulta}</nfe:nfeDadosMsg>
-            </nfe:nfeDistDFeInteresse>
-          </soap12:Body>
-        </soap12:Envelope>";
-
-
-            var conteudo = new StringContent(envelope, System.Text.Encoding.UTF8,
-            "application/soap+xml");
-            var resposta = await client.PostAsync(url, conteudo);
-            Console.WriteLine((int)resposta.StatusCode);
-            Console.WriteLine(await resposta.Content.ReadAsStringAsync());
-
-            var respostaXml = await resposta.Content.ReadAsStringAsync();
-            var doc = XDocument.Parse(respostaXml);
-            string novoNsu = doc.Descendants().First(e => e.Name.LocalName == "ultNSU").Value;
-            string cStat = doc.Descendants().First(e => e.Name.LocalName == "cStat").Value;
-            string maxNsu = doc.Descendants().First(e => e.Name.LocalName == "maxNSU").Value;
-
-
-            Console.WriteLine($"cStat: {cStat}");
-            Console.WriteLine($"Ultimo NSU: {novoNsu}");
-            Console.WriteLine($"Máximo NSU: {maxNsu}");
-
-            File.WriteAllText(@"C:\certificado\ultnsu.xml", novoNsu);
-            string ultNSU = File.ReadAllText(@"C:\certificado\ultNSU.xml");
-        }
+        
+        
     }
 }

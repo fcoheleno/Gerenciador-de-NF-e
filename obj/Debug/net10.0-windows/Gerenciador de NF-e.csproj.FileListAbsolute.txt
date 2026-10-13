@@ -23,3 +23,4 @@ C:\Users\Genius.DESKTOP-9C8CFM5\source\repos\Gerenciador de NF-e\Gerenciador de 
 C:\Users\Genius.DESKTOP-9C8CFM5\source\repos\Gerenciador de NF-e\Gerenciador de NF-e\obj\Debug\net10.0-windows\ref\Gerenciador de NF-e.dll
 C:\Users\Genius.DESKTOP-9C8CFM5\source\repos\Gerenciador de NF-e\Gerenciador de NF-e\obj\Debug\net10.0-windows\Gerenciador_de_NF_e.Properties.Resources.resources
 C:\Users\Genius.DESKTOP-9C8CFM5\source\repos\Gerenciador de NF-e\Gerenciador de NF-e\bin\Debug\net10.0-windows\FirebirdSql.Data.FirebirdClient.dll
+C:\Users\Genius.DESKTOP-9C8CFM5\source\repos\Gerenciador de NF-e\Gerenciador de NF-e\obj\Debug\net10.0-windows\Gerenciador de NF-e.sourcelink.json
