@@ -12,9 +12,9 @@ using System.Xml.Linq;
 
 namespace Gerenciador_de_NF_e
 {
-    public partial class UcConsulta : UserControl
+    public partial class UcCadastro : UserControl
     {
-        public UcConsulta()
+        public UcCadastro()
         {
             InitializeComponent();
         }

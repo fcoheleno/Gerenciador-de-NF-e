@@ -1,6 +1,6 @@
 ﻿namespace Gerenciador_de_NF_e
 {
-    partial class UcConsulta
+    partial class UcCadastro
     {
         /// <summary> 
         /// Variável de designer necessária.
@@ -39,7 +39,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcConsulta));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcCadastro));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -64,11 +64,11 @@
             // guna2HtmlLabel1
             // 
             guna2HtmlLabel1.BackColor = Color.Transparent;
-            guna2HtmlLabel1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel1.ForeColor = Color.White;
-            guna2HtmlLabel1.Location = new Point(58, 91);
+            guna2HtmlLabel1.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel1.ForeColor = Color.Teal;
+            guna2HtmlLabel1.Location = new Point(36, 56);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(374, 34);
+            guna2HtmlLabel1.Size = new Size(485, 47);
             guna2HtmlLabel1.TabIndex = 0;
             guna2HtmlLabel1.Text = "Preencha os campos necessários";
             // 
@@ -82,16 +82,16 @@
             txtClienteNome.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtClienteNome.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtClienteNome.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtClienteNome.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            txtClienteNome.ForeColor = Color.DarkGray;
+            txtClienteNome.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold);
+            txtClienteNome.ForeColor = SystemColors.ControlDarkDark;
             txtClienteNome.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtClienteNome.Location = new Point(53, 201);
-            txtClienteNome.Margin = new Padding(4);
+            txtClienteNome.Location = new Point(53, 227);
+            txtClienteNome.Margin = new Padding(8, 8, 8, 8);
             txtClienteNome.Name = "txtClienteNome";
             txtClienteNome.PlaceholderText = "Digite aqui...";
             txtClienteNome.SelectedText = "";
             txtClienteNome.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            txtClienteNome.Size = new Size(300, 49);
+            txtClienteNome.Size = new Size(520, 54);
             txtClienteNome.TabIndex = 1;
             txtClienteNome.TextChanged += txtClienteNome_TextChanged;
             // 
@@ -105,15 +105,16 @@
             txtCnpj.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtCnpj.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtCnpj.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtCnpj.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            txtCnpj.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold);
+            txtCnpj.ForeColor = SystemColors.ControlDarkDark;
             txtCnpj.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtCnpj.Location = new Point(53, 306);
-            txtCnpj.Margin = new Padding(4);
+            txtCnpj.Location = new Point(53, 375);
+            txtCnpj.Margin = new Padding(8, 8, 8, 8);
             txtCnpj.Name = "txtCnpj";
             txtCnpj.PlaceholderText = "Digite aqui...";
             txtCnpj.SelectedText = "";
             txtCnpj.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            txtCnpj.Size = new Size(300, 49);
+            txtCnpj.Size = new Size(520, 54);
             txtCnpj.TabIndex = 2;
             // 
             // txtSenhaCert
@@ -126,48 +127,49 @@
             txtSenhaCert.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtSenhaCert.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtSenhaCert.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtSenhaCert.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtSenhaCert.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold);
+            txtSenhaCert.ForeColor = SystemColors.ControlDarkDark;
             txtSenhaCert.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtSenhaCert.Location = new Point(394, 201);
-            txtSenhaCert.Margin = new Padding(4);
+            txtSenhaCert.Location = new Point(666, 227);
+            txtSenhaCert.Margin = new Padding(8, 8, 8, 8);
             txtSenhaCert.Name = "txtSenhaCert";
             txtSenhaCert.PasswordChar = '●';
             txtSenhaCert.PlaceholderText = "Digite aqui...";
             txtSenhaCert.SelectedText = "";
             txtSenhaCert.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            txtSenhaCert.Size = new Size(295, 49);
+            txtSenhaCert.Size = new Size(519, 54);
             txtSenhaCert.TabIndex = 3;
             // 
             // guna2HtmlLabel2
             // 
             guna2HtmlLabel2.BackColor = Color.Transparent;
-            guna2HtmlLabel2.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel2.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             guna2HtmlLabel2.ForeColor = Color.White;
-            guna2HtmlLabel2.Location = new Point(58, 262);
+            guna2HtmlLabel2.Location = new Point(58, 330);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(54, 27);
+            guna2HtmlLabel2.Size = new Size(70, 34);
             guna2HtmlLabel2.TabIndex = 4;
             guna2HtmlLabel2.Text = "CNPJ:";
             // 
             // guna2HtmlLabel3
             // 
             guna2HtmlLabel3.BackColor = Color.Transparent;
-            guna2HtmlLabel3.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel3.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             guna2HtmlLabel3.ForeColor = Color.White;
-            guna2HtmlLabel3.Location = new Point(58, 167);
+            guna2HtmlLabel3.Location = new Point(58, 182);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            guna2HtmlLabel3.Size = new Size(153, 27);
+            guna2HtmlLabel3.Size = new Size(202, 34);
             guna2HtmlLabel3.TabIndex = 5;
             guna2HtmlLabel3.Text = "Nome do Cliente:";
             // 
             // guna2HtmlLabel4
             // 
             guna2HtmlLabel4.BackColor = Color.Transparent;
-            guna2HtmlLabel4.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel4.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             guna2HtmlLabel4.ForeColor = Color.White;
-            guna2HtmlLabel4.Location = new Point(394, 167);
+            guna2HtmlLabel4.Location = new Point(684, 182);
             guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            guna2HtmlLabel4.Size = new Size(186, 27);
+            guna2HtmlLabel4.Size = new Size(247, 34);
             guna2HtmlLabel4.TabIndex = 6;
             guna2HtmlLabel4.Text = "Senha do Certificado:\r\n";
             // 
@@ -185,14 +187,16 @@
             txtCaminho.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtCaminho.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtCaminho.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtCaminho.Font = new Font("Segoe UI", 9F);
+            txtCaminho.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold);
+            txtCaminho.ForeColor = SystemColors.ControlDarkDark;
             txtCaminho.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtCaminho.Location = new Point(58, 436);
+            txtCaminho.Location = new Point(53, 566);
+            txtCaminho.Margin = new Padding(6, 7, 6, 7);
             txtCaminho.Name = "txtCaminho";
             txtCaminho.PlaceholderText = "";
             txtCaminho.SelectedText = "";
             txtCaminho.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            txtCaminho.Size = new Size(295, 41);
+            txtCaminho.Size = new Size(520, 54);
             txtCaminho.TabIndex = 8;
             // 
             // btnSelectCertificado
@@ -206,10 +210,10 @@
             btnSelectCertificado.FillColor = Color.Teal;
             btnSelectCertificado.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSelectCertificado.ForeColor = Color.White;
-            btnSelectCertificado.Location = new Point(58, 380);
+            btnSelectCertificado.Location = new Point(53, 468);
             btnSelectCertificado.Name = "btnSelectCertificado";
             btnSelectCertificado.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnSelectCertificado.Size = new Size(224, 50);
+            btnSelectCertificado.Size = new Size(230, 67);
             btnSelectCertificado.TabIndex = 9;
             btnSelectCertificado.Text = "Selecionar Certificado";
             btnSelectCertificado.Click += btnSelectCertificado_Click;
@@ -228,10 +232,10 @@
             btnViewSenha.Font = new Font("Segoe UI", 9F);
             btnViewSenha.ForeColor = Color.White;
             btnViewSenha.Image = (Image)resources.GetObject("btnViewSenha.Image");
-            btnViewSenha.Location = new Point(653, 212);
+            btnViewSenha.Location = new Point(1135, 240);
             btnViewSenha.Name = "btnViewSenha";
             btnViewSenha.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnViewSenha.Size = new Size(25, 27);
+            btnViewSenha.Size = new Size(35, 32);
             btnViewSenha.TabIndex = 10;
             btnViewSenha.Click += btnViewSenha_Click;
             // 
@@ -246,10 +250,10 @@
             btnCadastrar.FillColor = Color.Teal;
             btnCadastrar.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCadastrar.ForeColor = Color.White;
-            btnCadastrar.Location = new Point(434, 414);
+            btnCadastrar.Location = new Point(768, 468);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            btnCadastrar.Size = new Size(226, 63);
+            btnCadastrar.Size = new Size(236, 83);
             btnCadastrar.TabIndex = 11;
             btnCadastrar.Text = "Cadastrar informações";
             btnCadastrar.Click += btnEnviar_Click;
@@ -257,11 +261,11 @@
             // labelUf
             // 
             labelUf.BackColor = Color.Transparent;
-            labelUf.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelUf.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             labelUf.ForeColor = Color.White;
-            labelUf.Location = new Point(394, 272);
+            labelUf.Location = new Point(684, 330);
             labelUf.Name = "labelUf";
-            labelUf.Size = new Size(208, 27);
+            labelUf.Size = new Size(278, 34);
             labelUf.TabIndex = 13;
             labelUf.Text = "Unidade federativa (Uf):";
             // 
@@ -275,18 +279,19 @@
             txtUf.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtUf.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtUf.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtUf.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtUf.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold);
+            txtUf.ForeColor = SystemColors.ControlDarkDark;
             txtUf.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtUf.Location = new Point(394, 306);
-            txtUf.Margin = new Padding(4);
+            txtUf.Location = new Point(666, 375);
+            txtUf.Margin = new Padding(8, 8, 8, 8);
             txtUf.Name = "txtUf";
             txtUf.PlaceholderText = "Digite aqui...";
             txtUf.SelectedText = "";
             txtUf.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            txtUf.Size = new Size(295, 49);
+            txtUf.Size = new Size(520, 54);
             txtUf.TabIndex = 12;
             // 
-            // UcConsulta
+            // UcCadastro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -304,8 +309,8 @@
             Controls.Add(txtCnpj);
             Controls.Add(txtClienteNome);
             Controls.Add(guna2HtmlLabel1);
-            Name = "UcConsulta";
-            Size = new Size(742, 545);
+            Name = "UcCadastro";
+            Size = new Size(1257, 875);
             ResumeLayout(false);
             PerformLayout();
         }
