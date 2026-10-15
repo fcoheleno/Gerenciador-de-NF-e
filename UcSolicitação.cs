@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FirebirdSql.Data.FirebirdClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,11 +36,20 @@ namespace Gerenciador_de_NF_e
             var clientes = _repositorio.Listar();
 
             cmbClientes.DisplayMember = "Nome";
-            cmbClientes.ValueMember = "Id";
+            cmbClientes.ValueMember = "Cnpj";
             cmbClientes.DataSource = clientes;
-            cmbClientes.SelectedIndex = -1;
+            
 
             //btnSolicitar.Enabled = false;
+        }
+
+        public Cliente BuscarPorCnpj(string cnpj) 
+        {
+            using (var conn = new FbConnection(Conexao.ConnectionString))
+            {
+                conn.Open();
+                string sql = @"SELECT CERTIFICADO_CLIENTE, SENHA_CERTIFICADO, UF_CLIENTE FROM CLIENTES_CREDENCIAIS WHERE CNPJ_CLIENTE = @cnpj 
+            }
         }
 
     }

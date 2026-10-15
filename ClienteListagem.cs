@@ -23,7 +23,7 @@ namespace Gerenciador_de_NF_e
                 using (var r = cmd.ExecuteReader())
                 {
                     while (r.Read())
-                        lista.Add(new Cliente { Id = r.GetString(0), Nome = r.GetString(1) });
+                        lista.Add(new Cliente { Cnpj = r.GetString(0), Nome = r.GetString(1) });
                 }
             }
 
