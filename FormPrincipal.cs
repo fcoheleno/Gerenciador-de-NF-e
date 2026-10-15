@@ -25,31 +25,12 @@ namespace Gerenciador_de_NF_e
             AbrirConsulta();
         }
 
-        private void btnSolicitacao_Click(object sender, EventArgs e)
-        {
-            AbrirSolicitacao();
-        }
-
-
-
-        //Funções do painel
-
         private void AbrirConsulta()
         {
             panelConteudo.Controls.Clear();
-            UcCadastro uc = new UcCadastro();
+            UcConsulta uc = new UcConsulta();
             uc.Dock = DockStyle.Fill;
             panelConteudo.Controls.Add(uc);
         }
-
-        private void AbrirSolicitacao()
-        {
-            panelConteudo.Controls.Clear();
-            UcSolicitação uc = new UcSolicitação();
-            uc.Dock = DockStyle.Fill;
-            panelConteudo.Controls.Add(uc);
-        }
-
-        
     }
 }

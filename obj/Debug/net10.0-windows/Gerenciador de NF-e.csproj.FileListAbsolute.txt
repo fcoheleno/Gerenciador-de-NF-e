@@ -9,6 +9,7 @@ C:\Users\Genius.DESKTOP-9C8CFM5\source\repos\Gerenciador de NF-e\Gerenciador de 
 C:\Users\Genius.DESKTOP-9C8CFM5\source\repos\Gerenciador de NF-e\Gerenciador de NF-e\obj\Debug\net10.0-windows\Gerenciador de NF-e.csproj.AssemblyReference.cache
 C:\Users\Genius.DESKTOP-9C8CFM5\source\repos\Gerenciador de NF-e\Gerenciador de NF-e\obj\Debug\net10.0-windows\Gerenciador_de_NF_e.Form1.resources
 C:\Users\Genius.DESKTOP-9C8CFM5\source\repos\Gerenciador de NF-e\Gerenciador de NF-e\obj\Debug\net10.0-windows\Gerenciador_de_NF_e.FormPrincipal.resources
+C:\Users\Genius.DESKTOP-9C8CFM5\source\repos\Gerenciador de NF-e\Gerenciador de NF-e\obj\Debug\net10.0-windows\Gerenciador_de_NF_e.UcConsulta.resources
 C:\Users\Genius.DESKTOP-9C8CFM5\source\repos\Gerenciador de NF-e\Gerenciador de NF-e\obj\Debug\net10.0-windows\Gerenciador de NF-e.csproj.GenerateResource.cache
 C:\Users\Genius.DESKTOP-9C8CFM5\source\repos\Gerenciador de NF-e\Gerenciador de NF-e\obj\Debug\net10.0-windows\Gerenciador de NF-e.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Genius.DESKTOP-9C8CFM5\source\repos\Gerenciador de NF-e\Gerenciador de NF-e\obj\Debug\net10.0-windows\Gerenciador de NF-e.AssemblyInfoInputs.cache
@@ -23,5 +24,30 @@ C:\Users\Genius.DESKTOP-9C8CFM5\source\repos\Gerenciador de NF-e\Gerenciador de 
 C:\Users\Genius.DESKTOP-9C8CFM5\source\repos\Gerenciador de NF-e\Gerenciador de NF-e\obj\Debug\net10.0-windows\Gerenciador_de_NF_e.Properties.Resources.resources
 C:\Users\Genius.DESKTOP-9C8CFM5\source\repos\Gerenciador de NF-e\Gerenciador de NF-e\bin\Debug\net10.0-windows\FirebirdSql.Data.FirebirdClient.dll
 C:\Users\Genius.DESKTOP-9C8CFM5\source\repos\Gerenciador de NF-e\Gerenciador de NF-e\obj\Debug\net10.0-windows\Gerenciador de NF-e.sourcelink.json
-C:\Users\Genius.DESKTOP-9C8CFM5\source\repos\Gerenciador de NF-e\Gerenciador de NF-e\obj\Debug\net10.0-windows\Gerenciador_de_NF_e.UcCadastro.resources
-C:\Users\Genius.DESKTOP-9C8CFM5\source\repos\Gerenciador de NF-e\Gerenciador de NF-e\obj\Debug\net10.0-windows\Gerenciador_de_NF_e.UcSolicitação.resources
+C:\Users\2008n\source\repos\Natanael1005-ai\Gerenciador-de-NF-e-N-\obj\Debug\net10.0-windows\Gerenciador de NF-e.dll
+C:\Users\2008n\source\repos\Natanael1005-ai\Gerenciador-de-NF-e-N-\obj\Debug\net10.0-windows\refint\Gerenciador de NF-e.dll
+C:\Users\2008n\source\repos\Natanael1005-ai\Gerenciador-de-NF-e-N-\obj\Debug\net10.0-windows\Gerenciador de NF-e.pdb
+C:\Users\2008n\source\repos\Natanael1005-ai\Gerenciador-de-NF-e-N-\bin\Debug\net10.0-windows\Gerenciador de NF-e.exe
+C:\Users\2008n\source\repos\Natanael1005-ai\Gerenciador-de-NF-e-N-\bin\Debug\net10.0-windows\Gerenciador de NF-e.deps.json
+C:\Users\2008n\source\repos\Natanael1005-ai\Gerenciador-de-NF-e-N-\bin\Debug\net10.0-windows\Gerenciador de NF-e.runtimeconfig.json
+C:\Users\2008n\source\repos\Natanael1005-ai\Gerenciador-de-NF-e-N-\bin\Debug\net10.0-windows\Gerenciador de NF-e.dll
+C:\Users\2008n\source\repos\Natanael1005-ai\Gerenciador-de-NF-e-N-\bin\Debug\net10.0-windows\Gerenciador de NF-e.pdb
+C:\Users\2008n\source\repos\Natanael1005-ai\Gerenciador-de-NF-e-N-\bin\Debug\net10.0-windows\FirebirdSql.Data.FirebirdClient.dll
+C:\Users\2008n\source\repos\Natanael1005-ai\Gerenciador-de-NF-e-N-\bin\Debug\net10.0-windows\Guna.UI2.dll
+C:\Users\2008n\source\repos\Natanael1005-ai\Gerenciador-de-NF-e-N-\bin\Debug\net10.0-windows\System.Management.dll
+C:\Users\2008n\source\repos\Natanael1005-ai\Gerenciador-de-NF-e-N-\bin\Debug\net10.0-windows\runtimes\win\lib\net7.0\System.Management.dll
+C:\Users\2008n\source\repos\Natanael1005-ai\Gerenciador-de-NF-e-N-\obj\Debug\net10.0-windows\Gerenciador de NF-e.csproj.AssemblyReference.cache
+C:\Users\2008n\source\repos\Natanael1005-ai\Gerenciador-de-NF-e-N-\obj\Debug\net10.0-windows\Gerenciador_de_NF_e.Form1.resources
+C:\Users\2008n\source\repos\Natanael1005-ai\Gerenciador-de-NF-e-N-\obj\Debug\net10.0-windows\Gerenciador_de_NF_e.FormPrincipal.resources
+C:\Users\2008n\source\repos\Natanael1005-ai\Gerenciador-de-NF-e-N-\obj\Debug\net10.0-windows\Gerenciador_de_NF_e.Properties.Resources.resources
+C:\Users\2008n\source\repos\Natanael1005-ai\Gerenciador-de-NF-e-N-\obj\Debug\net10.0-windows\Gerenciador_de_NF_e.UcConsulta.resources
+C:\Users\2008n\source\repos\Natanael1005-ai\Gerenciador-de-NF-e-N-\obj\Debug\net10.0-windows\Gerenciador_de_NF_e.UserControl1.resources
+C:\Users\2008n\source\repos\Natanael1005-ai\Gerenciador-de-NF-e-N-\obj\Debug\net10.0-windows\Gerenciador de NF-e.csproj.GenerateResource.cache
+C:\Users\2008n\source\repos\Natanael1005-ai\Gerenciador-de-NF-e-N-\obj\Debug\net10.0-windows\Gerenciador de NF-e.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\2008n\source\repos\Natanael1005-ai\Gerenciador-de-NF-e-N-\obj\Debug\net10.0-windows\Gerenciador de NF-e.AssemblyInfoInputs.cache
+C:\Users\2008n\source\repos\Natanael1005-ai\Gerenciador-de-NF-e-N-\obj\Debug\net10.0-windows\Gerenciador de NF-e.AssemblyInfo.cs
+C:\Users\2008n\source\repos\Natanael1005-ai\Gerenciador-de-NF-e-N-\obj\Debug\net10.0-windows\Gerenciador de NF-e.csproj.CoreCompileInputs.cache
+C:\Users\2008n\source\repos\Natanael1005-ai\Gerenciador-de-NF-e-N-\obj\Debug\net10.0-windows\Gerenciador de NF-e.sourcelink.json
+C:\Users\2008n\source\repos\Natanael1005-ai\Gerenciador-de-NF-e-N-\obj\Debug\net10.0-windows\Gerencia.E85056FE.Up2Date
+C:\Users\2008n\source\repos\Natanael1005-ai\Gerenciador-de-NF-e-N-\obj\Debug\net10.0-windows\Gerenciador de NF-e.genruntimeconfig.cache
+C:\Users\2008n\source\repos\Natanael1005-ai\Gerenciador-de-NF-e-N-\obj\Debug\net10.0-windows\ref\Gerenciador de NF-e.dll
