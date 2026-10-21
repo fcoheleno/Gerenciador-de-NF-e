@@ -50,6 +50,12 @@ namespace Gerenciador_de_NF_e
             panelConteudo.Controls.Add(uc);
         }
 
-        
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            panelConteudo.Controls.Clear();
+            UcEdicao uc = new UcEdicao();
+            uc.Dock = DockStyle.Fill;
+            panelConteudo.Controls.Add(uc);
+        }
     }
 }

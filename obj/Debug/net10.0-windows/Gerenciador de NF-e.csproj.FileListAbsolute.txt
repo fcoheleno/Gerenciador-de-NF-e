@@ -52,3 +52,4 @@ C:\Projetos\Gerenciador-de-NF-e\obj\Debug\net10.0-windows\refint\Gerenciador de 
 C:\Projetos\Gerenciador-de-NF-e\obj\Debug\net10.0-windows\Gerenciador de NF-e.pdb
 C:\Projetos\Gerenciador-de-NF-e\obj\Debug\net10.0-windows\Gerenciador de NF-e.genruntimeconfig.cache
 C:\Projetos\Gerenciador-de-NF-e\obj\Debug\net10.0-windows\ref\Gerenciador de NF-e.dll
+C:\Projetos\Gerenciador-de-NF-e\obj\Debug\net10.0-windows\Gerenciador_de_NF_e.UcEdicao.resources
