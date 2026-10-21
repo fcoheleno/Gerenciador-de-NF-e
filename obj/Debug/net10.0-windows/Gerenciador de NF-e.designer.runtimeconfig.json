@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\Genius.DESKTOP-9C8CFM5\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Genius.DESKTOP-9C8CFM5\\.nuget\\packages",
+      "C:\\Users\\Genius_Saidas\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Genius_Saidas\\.nuget\\packages",
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {

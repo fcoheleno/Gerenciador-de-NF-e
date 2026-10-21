@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "HjA3z2Ps5w0=",
+  "dgSpecHash": "MW8u56oHqpc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Genius.DESKTOP-9C8CFM5\\source\\repos\\Gerenciador de NF-e\\Gerenciador de NF-e\\Gerenciador de NF-e.csproj",
+  "projectFilePath": "C:\\Projetos\\Gerenciador-de-NF-e\\Gerenciador de NF-e.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Genius.DESKTOP-9C8CFM5\\.nuget\\packages\\firebirdsql.data.firebirdclient\\10.3.4\\firebirdsql.data.firebirdclient.10.3.4.nupkg.sha512",
-    "C:\\Users\\Genius.DESKTOP-9C8CFM5\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.8\\guna.ui2.winforms.2.0.4.8.nupkg.sha512",
-    "C:\\Users\\Genius.DESKTOP-9C8CFM5\\.nuget\\packages\\system.management\\7.0.0\\system.management.7.0.0.nupkg.sha512"
+    "C:\\Users\\Genius_Saidas\\.nuget\\packages\\firebirdsql.data.firebirdclient\\10.3.4\\firebirdsql.data.firebirdclient.10.3.4.nupkg.sha512",
+    "C:\\Users\\Genius_Saidas\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.8\\guna.ui2.winforms.2.0.4.8.nupkg.sha512",
+    "C:\\Users\\Genius_Saidas\\.nuget\\packages\\system.management\\7.0.0\\system.management.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }

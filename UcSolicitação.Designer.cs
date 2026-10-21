@@ -30,9 +30,15 @@
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
             cmbClientes = new ComboBox();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            btnSolicitar = new Guna.UI2.WinForms.Guna2Button();
+            pnlLoading = new Guna.UI2.WinForms.Guna2Panel();
+            label2 = new Label();
+            progressBar = new ProgressBar();
+            pnlLoading.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -56,30 +62,63 @@
             cmbClientes.TabIndex = 1;
             cmbClientes.SelectedIndexChanged += cmbClientes_SelectedIndexChanged;
             // 
-            // guna2Button1
+            // btnSolicitar
             // 
-            guna2Button1.BorderRadius = 10;
-            guna2Button1.CustomizableEdges = customizableEdges1;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.Teal;
-            guna2Button1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(94, 576);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button1.Size = new Size(205, 68);
-            guna2Button1.TabIndex = 2;
-            guna2Button1.Text = "Solicitar";
+            btnSolicitar.BorderRadius = 10;
+            btnSolicitar.CustomizableEdges = customizableEdges1;
+            btnSolicitar.DisabledState.BorderColor = Color.DarkGray;
+            btnSolicitar.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnSolicitar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnSolicitar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSolicitar.FillColor = Color.Teal;
+            btnSolicitar.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSolicitar.ForeColor = Color.White;
+            btnSolicitar.Location = new Point(94, 576);
+            btnSolicitar.Name = "btnSolicitar";
+            btnSolicitar.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnSolicitar.Size = new Size(205, 68);
+            btnSolicitar.TabIndex = 2;
+            btnSolicitar.Text = "Solicitar";
+            btnSolicitar.Click += btnSolicitar_Click;
+            // 
+            // pnlLoading
+            // 
+            pnlLoading.Controls.Add(label2);
+            pnlLoading.Controls.Add(progressBar);
+            pnlLoading.CustomizableEdges = customizableEdges3;
+            pnlLoading.Dock = DockStyle.Fill;
+            pnlLoading.Location = new Point(0, 0);
+            pnlLoading.Name = "pnlLoading";
+            pnlLoading.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            pnlLoading.Size = new Size(1109, 755);
+            pnlLoading.TabIndex = 3;
+            pnlLoading.Visible = false;
+            pnlLoading.Paint += pnlLoading_Paint;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(316, 192);
+            label2.Name = "label2";
+            label2.Size = new Size(481, 32);
+            label2.TabIndex = 1;
+            label2.Text = "Fazendo a solicitação a SEFAZ, aguarde...";
+            // 
+            // progressBar
+            // 
+            progressBar.Location = new Point(237, 259);
+            progressBar.Name = "progressBar";
+            progressBar.Size = new Size(636, 33);
+            progressBar.TabIndex = 0;
             // 
             // UcSolicitação
             // 
             AutoScaleDimensions = new SizeF(14F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            Controls.Add(guna2Button1);
+            Controls.Add(pnlLoading);
+            Controls.Add(btnSolicitar);
             Controls.Add(cmbClientes);
             Controls.Add(label1);
             Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -87,6 +126,8 @@
             Name = "UcSolicitação";
             Size = new Size(1109, 755);
             Load += UcSolicitação_Load;
+            pnlLoading.ResumeLayout(false);
+            pnlLoading.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -95,6 +136,9 @@
 
         private Label label1;
         private ComboBox cmbClientes;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnSolicitar;
+        private Guna.UI2.WinForms.Guna2Panel pnlLoading;
+        private Label label2;
+        private ProgressBar progressBar;
     }
 }

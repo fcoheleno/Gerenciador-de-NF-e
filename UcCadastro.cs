@@ -63,15 +63,6 @@ namespace Gerenciador_de_NF_e
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            //aq eu vou colocar a logica de guardar algumas informações da empresas [Nome, Cnpj, Senha e o certificado]
-
-            string tpAmb = "2";
-            string codigoUf = "23";
-            //string cnpj = Regex.Match(certificadoCliente.Subject, @"\d{14}").Value;
-            //Console.WriteLine("Cnpj do certificado: " + cnpj);
-            string Nsu = "000000000000000";
-            //isso aq foi pego lá do codigo anterior
-
              situacao = ArmazenarBd();
         }
 
@@ -86,17 +77,19 @@ namespace Gerenciador_de_NF_e
             string nomeCliente = txtClienteNome.Text;
             string cnpjCliente = txtCnpj.Text;
             string senhaCertificado = txtSenhaCert.Text;
-            string certificadoCaminho = caminhoPfx;
+            byte[] certificadoCaminho = File.ReadAllBytes(txtCaminho.Text);
+            string ufCliente = txtUf.Text;
 
             using (FbConnection conn = Conexao.AbrirConexao())
             {
                 try
                 {
-                    string query = "INSERT INTO CREDENCIAIS(NOME_CLIENTE, CNPJ_CLIENTE, CERTIFICADO_CAMINHO, SENHA_CERTIFICADO) VALUES(@NomeCliente, @CnpjCliente, @CertificadoCaminho, @SenhaCertificado)";
+                    string query = "INSERT INTO CLIENTES_CREDENCIAIS(CNPJ_CLIENTE, NOME_CLIENTE, UF_CLIENTE, CERTIFICADO_CLIENTE, SENHA_CERTIFICADO) VALUES(@CnpjCliente, @NomeCliente, @UfCliente,@CertificadoCaminho, @SenhaCertificado)";
                     using (FbCommand cmd = new FbCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@NomeCliente", nomeCliente);
                         cmd.Parameters.AddWithValue("@CnpjCliente", cnpjCliente);
+                        cmd.Parameters.AddWithValue("@NomeCliente", nomeCliente);
+                        cmd.Parameters.AddWithValue("@UfCliente", ufCliente);
                         cmd.Parameters.AddWithValue("@CertificadoCaminho", certificadoCaminho);
                         cmd.Parameters.AddWithValue("@SenhaCertificado", senhaCertificado);
                         cmd.ExecuteNonQuery();
@@ -113,8 +106,6 @@ namespace Gerenciador_de_NF_e
             }
         }
 
-
-        //private bool Verificador() { }
 
         
         

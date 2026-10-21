@@ -12,45 +12,86 @@ namespace Gerenciador_de_NF_e
 {
     public partial class UcSolicitação : UserControl
     {
+        private readonly ClienteListagem _repositorio = new ClienteListagem(Conexao.ConnectionString);
+        private readonly SefazServico _sefazServico = new SefazServico();
+        private Cliente _clienteAtual;
+
         public UcSolicitação()
         {
             InitializeComponent();
-        }
-
-        private readonly ClienteListagem _repositorio = new ClienteListagem(Conexao.ConnectionString);
-
-        private void cmbClientes_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void UcSolicitação_Load(object sender, EventArgs e)
         {
             if (DesignMode) return;
             CarregarClientes();
-            List<Cliente> cliente = _repositorio.Listar();
         }
 
         private void CarregarClientes()
         {
-            var clientes = _repositorio.Listar();
-
             cmbClientes.DisplayMember = "Nome";
             cmbClientes.ValueMember = "Cnpj";
-            cmbClientes.DataSource = clientes;
-            
+            cmbClientes.DataSource = _repositorio.Listar();
+            cmbClientes.SelectedIndex = -1;   // começa sem ninguém selecionado
 
-            //btnSolicitar.Enabled = false;
+            btnSolicitar.Enabled = false;
         }
 
-        public Cliente BuscarPorCnpj(string cnpj) 
+        private void cmbClientes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            using (var conn = new FbConnection(Conexao.ConnectionString))
+            if (!(cmbClientes.SelectedItem is Cliente selecionado)) return;
+
+            _clienteAtual = _repositorio.BuscarPorCnpj(selecionado.Cnpj);
+
+            if (_clienteAtual == null)
             {
-                conn.Open();
-                string sql = @"SELECT CERTIFICADO_CLIENTE, SENHA_CERTIFICADO, UF_CLIENTE FROM CLIENTES_CREDENCIAIS WHERE CNPJ_CLIENTE = @cnpj 
+                MessageBox.Show("Este cliente não possui credenciais cadastradas no nosso sistema");
+                btnSolicitar.Enabled = false;
+                return;
+            }
+
+            _clienteAtual.UltNsu = "000000000000000"; // provisório, fazer alteração aqui depois
+            btnSolicitar.Enabled = true;
+        }
+
+        private async void btnSolicitar_Click(object sender, EventArgs e)
+        {
+            if (_clienteAtual == null)
+            {
+                MessageBox.Show("Selecione um cliente.");
+                return;
+            }
+
+            MostrarLoading(true);
+
+            try
+            {
+                RespostaSefaz resp = await _sefazServico.SolicitarAsync(_clienteAtual);
+
+                MessageBox.Show($"cStat: {resp.CStat}\n{resp.Motivo}", "Resposta da SEFAZ");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro na solicitação");
+            }
+            finally
+            {
+                MostrarLoading(false);
             }
         }
 
+        private void MostrarLoading(bool mostrar)
+        {
+            pnlLoading.Visible = mostrar;
+            if (mostrar) pnlLoading.BringToFront();
+
+            btnSolicitar.Enabled = !mostrar;
+            cmbClientes.Enabled = !mostrar;
+        }
+
+        private void pnlLoading_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

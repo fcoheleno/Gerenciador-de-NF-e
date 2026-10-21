@@ -16,19 +16,62 @@ namespace Gerenciador_de_NF_e
         public List<Cliente> Listar()
         {
             var lista = new List<Cliente>();
-            using (var conn = new FbConnection(_conexao))
+
+            using (FbConnection conn = Conexao.AbrirConexao())
             {
-                conn.Open();
-                using (var cmd = new FbCommand("SELECT ID, NOME_CLIENTE FROM CREDENCIAIS ORDER BY NOME_CLIENTE", conn))
+
+                string sql = @"SELECT CNPJ_CLIENTE, NOME_CLIENTE
+                               FROM CLIENTES_CREDENCIAIS
+                               ORDER BY NOME_CLIENTE";
+
+                using (var cmd = new FbCommand(sql, conn))
                 using (var r = cmd.ExecuteReader())
                 {
                     while (r.Read())
-                        lista.Add(new Cliente { Cnpj = r.GetString(0), Nome = r.GetString(1) });
+                    {
+                        lista.Add(new Cliente
+                        {
+                            Cnpj = r.GetString(0),
+                            Nome = r.GetString(1)
+                        });
+                    }
                 }
             }
 
-
             return lista;
+        }
+
+        public Cliente BuscarPorCnpj(string cnpj)
+        {
+            using (var conn = new FbConnection(Conexao.ConnectionString))
+            {
+                conn.Open();
+
+                string sql = @"SELECT CNPJ_CLIENTE, NOME_CLIENTE, UF_CLIENTE,
+                              CERTIFICADO_CLIENTE, SENHA_CERTIFICADO
+                       FROM CLIENTES_CREDENCIAIS
+                       WHERE CNPJ_CLIENTE = @cnpj";
+
+                using (var cmd = new FbCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@cnpj", cnpj);
+
+                    using (var r = cmd.ExecuteReader())
+                    {
+                        if (!r.Read()) return null;
+
+                        return new Cliente
+                        {
+                            Cnpj = r.GetString(0),
+                            Nome = r.GetString(1),
+                            UfCodigo = r.GetString(2),
+                            CertificadoBytes = r.IsDBNull(3) ? null : (byte[])r["CERTIFICADO_CLIENTE"],
+                            Senha_Certificado = r.GetString(4),
+                            UltNsu = "000000000000000" // provisório
+                        };
+                    }
+                }
+            }
         }
 
 

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Genius.DESKTOP-9C8CFM5\\source\\repos\\Gerenciador de NF-e\\Gerenciador de NF-e\\Gerenciador de NF-e.csproj": {}
+    "C:\\Projetos\\Gerenciador-de-NF-e\\Gerenciador de NF-e.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Genius.DESKTOP-9C8CFM5\\source\\repos\\Gerenciador de NF-e\\Gerenciador de NF-e\\Gerenciador de NF-e.csproj": {
+    "C:\\Projetos\\Gerenciador-de-NF-e\\Gerenciador de NF-e.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Genius.DESKTOP-9C8CFM5\\source\\repos\\Gerenciador de NF-e\\Gerenciador de NF-e\\Gerenciador de NF-e.csproj",
+        "projectUniqueName": "C:\\Projetos\\Gerenciador-de-NF-e\\Gerenciador de NF-e.csproj",
         "projectName": "Gerenciador de NF-e",
-        "projectPath": "C:\\Users\\Genius.DESKTOP-9C8CFM5\\source\\repos\\Gerenciador de NF-e\\Gerenciador de NF-e\\Gerenciador de NF-e.csproj",
-        "packagesPath": "C:\\Users\\Genius.DESKTOP-9C8CFM5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Genius.DESKTOP-9C8CFM5\\source\\repos\\Gerenciador de NF-e\\Gerenciador de NF-e\\obj\\",
+        "projectPath": "C:\\Projetos\\Gerenciador-de-NF-e\\Gerenciador de NF-e.csproj",
+        "packagesPath": "C:\\Users\\Genius_Saidas\\.nuget\\packages\\",
+        "outputPath": "C:\\Projetos\\Gerenciador-de-NF-e\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Genius.DESKTOP-9C8CFM5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Genius_Saidas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
