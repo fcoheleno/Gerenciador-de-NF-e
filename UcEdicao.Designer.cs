@@ -46,7 +46,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            cmbSelecionador = new Guna.UI2.WinForms.Guna2ComboBox();
             label1 = new Label();
             pnlEdicao = new Guna.UI2.WinForms.Guna2Panel();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
@@ -63,23 +63,24 @@
             pnlEdicao.SuspendLayout();
             SuspendLayout();
             // 
-            // guna2ComboBox1
+            // cmbSelecionador
             // 
-            guna2ComboBox1.BackColor = Color.Transparent;
-            guna2ComboBox1.BorderRadius = 7;
-            guna2ComboBox1.CustomizableEdges = customizableEdges1;
-            guna2ComboBox1.DrawMode = DrawMode.OwnerDrawFixed;
-            guna2ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            guna2ComboBox1.FocusedColor = Color.FromArgb(94, 148, 255);
-            guna2ComboBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2ComboBox1.Font = new Font("Segoe UI", 10F);
-            guna2ComboBox1.ForeColor = Color.FromArgb(68, 88, 112);
-            guna2ComboBox1.ItemHeight = 30;
-            guna2ComboBox1.Location = new Point(75, 83);
-            guna2ComboBox1.Name = "guna2ComboBox1";
-            guna2ComboBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2ComboBox1.Size = new Size(600, 36);
-            guna2ComboBox1.TabIndex = 0;
+            cmbSelecionador.BackColor = Color.Transparent;
+            cmbSelecionador.BorderRadius = 7;
+            cmbSelecionador.CustomizableEdges = customizableEdges1;
+            cmbSelecionador.DrawMode = DrawMode.OwnerDrawFixed;
+            cmbSelecionador.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbSelecionador.FocusedColor = Color.FromArgb(94, 148, 255);
+            cmbSelecionador.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cmbSelecionador.Font = new Font("Segoe UI", 10F);
+            cmbSelecionador.ForeColor = Color.FromArgb(68, 88, 112);
+            cmbSelecionador.ItemHeight = 30;
+            cmbSelecionador.Location = new Point(75, 83);
+            cmbSelecionador.Name = "cmbSelecionador";
+            cmbSelecionador.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            cmbSelecionador.Size = new Size(600, 36);
+            cmbSelecionador.TabIndex = 0;
+            cmbSelecionador.SelectedIndexChanged += this.cmbSelecionador_SelectedIndexChanged;
             // 
             // label1
             // 
@@ -309,16 +310,17 @@
             guna2TextBox10.TabIndex = 13;
             guna2TextBox10.Visible = false;
             // 
-            // EdicaoDados
+            // UcEdicao
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             Controls.Add(pnlEdicao);
             Controls.Add(label1);
-            Controls.Add(guna2ComboBox1);
-            Name = "EdicaoDados";
+            Controls.Add(cmbSelecionador);
+            Name = "UcEdicao";
             Size = new Size(1129, 663);
+            Load += UcEdicao_Load;
             pnlEdicao.ResumeLayout(false);
             pnlEdicao.PerformLayout();
             ResumeLayout(false);
@@ -327,7 +329,7 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbSelecionador;
         private Label label1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;

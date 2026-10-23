@@ -13,6 +13,8 @@ namespace Gerenciador_de_NF_e
             _conexao = conexao;
         }
 
+        private string ultNsu = "000000000000000";
+
         public List<Cliente> Listar()
         {
             var lista = new List<Cliente>();
@@ -51,6 +53,7 @@ namespace Gerenciador_de_NF_e
                               CERTIFICADO_CLIENTE, SENHA_CERTIFICADO
                        FROM CLIENTES_CREDENCIAIS
                        WHERE CNPJ_CLIENTE = @cnpj";
+                
 
                 using (var cmd = new FbCommand(sql, conn))
                 {
@@ -58,6 +61,7 @@ namespace Gerenciador_de_NF_e
 
                     using (var r = cmd.ExecuteReader())
                     {
+                        
                         if (!r.Read()) return null;
 
                         return new Cliente
@@ -68,7 +72,14 @@ namespace Gerenciador_de_NF_e
                             CertificadoBytes = r.IsDBNull(3) ? null : (byte[])r["CERTIFICADO_CLIENTE"],
                             Senha_Certificado = r.GetString(4),
                             UltNsu = "000000000000000" // provisório
+
+
                         };
+                        MessageBox.Show(
+                            "Certificado: " + r.GetString(3) +
+                            "\n\nCnpj: [" + r.GetString(0) + "]" +
+                            "\nUF do banco: [" + r.GetString(2) + "]" +
+                            "\nNSU: [" + ultNsu + "]");
                     }
                 }
             }

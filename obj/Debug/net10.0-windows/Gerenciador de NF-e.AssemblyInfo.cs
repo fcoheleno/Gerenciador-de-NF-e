@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Gerenciador de NF-e")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f93c00d5ba757aad988534c6210460d14eeaa56c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6e7477c65e12e85e87d99d1d98995689df38f5fa")]
 [assembly: System.Reflection.AssemblyProductAttribute("Gerenciador de NF-e")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Gerenciador de NF-e")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
