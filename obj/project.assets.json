@@ -136,11 +136,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\2008n\\source\\repos\\Gerenciador-de-NF-e_Novo\\Gerenciador de NF-e.csproj",
+      "projectUniqueName": "C:\\Users\\2008n\\source\\repos\\Gerenciador-de-NF-e\\Gerenciador de NF-e.csproj",
       "projectName": "Gerenciador de NF-e",
-      "projectPath": "C:\\Users\\2008n\\source\\repos\\Gerenciador-de-NF-e_Novo\\Gerenciador de NF-e.csproj",
+      "projectPath": "C:\\Users\\2008n\\source\\repos\\Gerenciador-de-NF-e\\Gerenciador de NF-e.csproj",
       "packagesPath": "C:\\Users\\2008n\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\2008n\\source\\repos\\Gerenciador-de-NF-e_Novo\\obj\\",
+      "outputPath": "C:\\Users\\2008n\\source\\repos\\Gerenciador-de-NF-e\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

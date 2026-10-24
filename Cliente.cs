@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Gerenciador_de_NF_e
+﻿namespace Gerenciador_de_NF_e
 {
     public class Cliente
     {
-        public string Nome { get; set; }
-        public string Cnpj { get; set; }
-        public string Caminho_Certificado { get; set; }
-        public string Senha_Certificado { get; set; }
-        public string UltNsu { get; set; }
+        public string Cnpj { get; set; } = "";
+        public string Nome { get; set; } = "";
+        public string UfCodigo { get; set; } = "";
+        public byte[]? CertificadoBytes { get; set; }
+        public string Senha_Certificado { get; set; } = "";
+        public string UltNsu { get; set; } = "000000000000000";
     }
 }

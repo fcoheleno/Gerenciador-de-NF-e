@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YIQ35gXt18Q=",
+  "dgSpecHash": "TfcGBV9vp10=",
   "success": true,
-  "projectFilePath": "C:\\Users\\2008n\\source\\repos\\Gerenciador-de-NF-e_Novo\\Gerenciador de NF-e.csproj",
+  "projectFilePath": "C:\\Users\\2008n\\source\\repos\\Gerenciador-de-NF-e\\Gerenciador de NF-e.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\2008n\\.nuget\\packages\\firebirdsql.data.firebirdclient\\10.3.4\\firebirdsql.data.firebirdclient.10.3.4.nupkg.sha512",
     "C:\\Users\\2008n\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.8\\guna.ui2.winforms.2.0.4.8.nupkg.sha512",

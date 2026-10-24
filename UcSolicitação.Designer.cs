@@ -1,100 +1,147 @@
-﻿namespace Gerenciador_de_NF_e
+﻿using System.ComponentModel;
+
+namespace Gerenciador_de_NF_e
 {
-    partial class UcSolicitação
+    public partial class UcSolicitação : UserControl
     {
-        /// <summary> 
-        /// Variável de designer necessária.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        // false = homologação; true = produção
+        private const bool Producao = false;
 
-        /// <summary> 
-        /// Limpar os recursos que estão sendo usados.
-        /// </summary>
-        /// <param name="disposing">true se for necessário descartar os recursos gerenciados; caso contrário, false.</param>
-        protected override void Dispose(bool disposing)
+        private readonly ClienteListagem _repositorio = new ClienteListagem(Conexao.ConnectionString);
+        private readonly SolicitacaoRepositorio _solicitacoes = new SolicitacaoRepositorio();
+        private readonly SefazServico _sefazServico = new SefazServico(Producao);
+        private Cliente? _clienteAtual;
+
+        public UcSolicitação()
         {
-            if (disposing && (components != null))
+            InitializeComponent();
+        }
+
+        private void UcSolicitação_Load(object sender, EventArgs e)
+        {
+            if (LicenseManager.UsageMode == LicenseUsageMode.Designtime) return;
+            CarregarClientes();
+        }
+
+        private void CarregarClientes()
+        {
+            cmbClientes.DisplayMember = "Nome";
+            cmbClientes.ValueMember = "Cnpj";
+            cmbClientes.DataSource = _repositorio.Listar();
+            cmbClientes.SelectedIndex = -1;
+
+            btnSolicitar.Enabled = false;
+        }
+
+        private void cmbClientes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbClientes.SelectedItem is not Cliente selecionado) return;
+
+            _clienteAtual = _repositorio.BuscarPorCnpj(selecionado.Cnpj);
+
+            if (_clienteAtual == null)
             {
-                components.Dispose();
+                MessageBox.Show("Este cliente não possui credenciais cadastradas no nosso sistema");
+                btnSolicitar.Enabled = false;
+                return;
             }
-            base.Dispose(disposing);
+
+            btnSolicitar.Enabled = true;
         }
 
-        #region Código gerado pelo Designer de Componentes
-
-        /// <summary> 
-        /// Método necessário para suporte ao Designer - não modifique 
-        /// o conteúdo deste método com o editor de código.
-        /// </summary>
-        private void InitializeComponent()
+        private async void btnSolicitar_Click(object sender, EventArgs e)
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            label1 = new Label();
-            cmbClientes = new ComboBox();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Black;
-            label1.ForeColor = Color.Teal;
-            label1.Location = new Point(56, 48);
-            label1.Name = "label1";
-            label1.Size = new Size(430, 64);
-            label1.TabIndex = 0;
-            label1.Text = "Selecione qual o cliente você deseja \r\nfazer a solicitação de forma manual";
-            // 
-            // cmbClientes
-            // 
-            cmbClientes.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbClientes.FormattingEnabled = true;
-            cmbClientes.Location = new Point(76, 149);
-            cmbClientes.Name = "cmbClientes";
-            cmbClientes.Size = new Size(941, 40);
-            cmbClientes.TabIndex = 1;
-            cmbClientes.SelectedIndexChanged += cmbClientes_SelectedIndexChanged;
-            // 
-            // guna2Button1
-            // 
-            guna2Button1.BorderRadius = 10;
-            guna2Button1.CustomizableEdges = customizableEdges1;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.Teal;
-            guna2Button1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(94, 576);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button1.Size = new Size(205, 68);
-            guna2Button1.TabIndex = 2;
-            guna2Button1.Text = "Solicitar";
-            // 
-            // UcSolicitação
-            // 
-            AutoScaleDimensions = new SizeF(14F, 32F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Black;
-            Controls.Add(guna2Button1);
-            Controls.Add(cmbClientes);
-            Controls.Add(label1);
-            Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Margin = new Padding(6);
-            Name = "UcSolicitação";
-            Size = new Size(1109, 755);
-            Load += UcSolicitação_Load;
-            ResumeLayout(false);
-            PerformLayout();
+            if (_clienteAtual == null)
+            {
+                MessageBox.Show("Selecione um cliente.");
+                return;
+            }
+
+            // 1) Lê o histórico: regra da espera de 1 hora e último NSU
+            UltimaSolicitacao? ultima;
+            try
+            {
+                ultima = _solicitacoes.BuscarUltima(_clienteAtual.Cnpj);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao ler o histórico de solicitações: " + ex.Message);
+                return;
+            }
+
+            if (ultima?.LiberadaEm is DateTime liberada && DateTime.Now < liberada)
+            {
+                MessageBox.Show(
+                    $"Não é necessário solicitar agora. Nova consulta liberada às {liberada:HH:mm}.",
+                    "Aguarde");
+                return;
+            }
+
+            _clienteAtual.UltNsu = ultima?.Nsu ?? "000000000000000";
+
+            // 2) Consulta a Sefaz
+            MostrarLoading(true);
+
+            try
+            {
+                RespostaSefaz resp = await _sefazServico.SolicitarAsync(_clienteAtual);
+
+                // 3) Grava no histórico (mantém o NSU anterior se a Sefaz devolveu erro)
+                bool sucesso = resp.CStat is "137" or "138";
+                string nsuGravar = sucesso && !string.IsNullOrWhiteSpace(resp.UltNsu)
+                    ? resp.UltNsu
+                    : _clienteAtual.UltNsu;
+
+                string resultado = $"{resp.CStat} - {resp.Motivo}";
+                if (resp.CStat == "138" && resp.AguardarUmaHora)
+                    resultado += " [aguardar 1h]";
+                if (resultado.Length > 100)
+                    resultado = resultado[..100];
+
+                string aviso = "";
+                try
+                {
+                    _solicitacoes.Registrar(_clienteAtual.Cnpj, resultado, nsuGravar);
+                }
+                catch (Exception ex)
+                {
+                    aviso = "\n\nAtenção: a consulta foi feita, mas não foi possível " +
+                            "gravar o histórico: " + ex.Message;
+                }
+
+                // 4) Mensagem para o usuário
+                string texto = $"cStat: {resp.CStat}\n{resp.Motivo}";
+                if (resp.CStat == "138")
+                    texto += $"\n\nNotas nesta consulta: {resp.Chaves.Count}";
+
+                if (resp.AguardarUmaHora)
+                    texto += "\n\nNão é necessário solicitar novamente durante 1 hora.";
+                else if (resp.CStat == "138")
+                    texto += "\n\nHá mais documentos: solicite novamente para continuar.";
+
+                MessageBox.Show(texto + aviso, "Resposta da SEFAZ");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro na solicitação");
+            }
+            finally
+            {
+                MostrarLoading(false);
+            }
         }
 
-        #endregion
+        private void MostrarLoading(bool mostrar)
+        {
+            pnlLoading.Visible = mostrar;
+            if (mostrar) pnlLoading.BringToFront();
 
-        private Label label1;
-        private ComboBox cmbClientes;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+            btnSolicitar.Enabled = !mostrar;
+            cmbClientes.Enabled = !mostrar;
+        }
+
+        private void pnlLoading_Paint(object sender, PaintEventArgs e)
+        {
+        }
     }
 }
