@@ -64,7 +64,7 @@
             guna2Panel1.Location = new Point(0, 0);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2Panel1.Size = new Size(311, 799);
+            guna2Panel1.Size = new Size(311, 804);
             guna2Panel1.TabIndex = 0;
             // 
             // btnEditar
@@ -152,7 +152,7 @@
             panelConteudo.Location = new Point(311, 0);
             panelConteudo.Name = "panelConteudo";
             panelConteudo.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            panelConteudo.Size = new Size(771, 799);
+            panelConteudo.Size = new Size(974, 804);
             panelConteudo.TabIndex = 1;
             panelConteudo.Paint += panelConteudo_Paint;
             // 
@@ -182,7 +182,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1082, 799);
+            ClientSize = new Size(1285, 804);
             Controls.Add(panelConteudo);
             Controls.Add(guna2Panel1);
             Name = "FormPrincipal";

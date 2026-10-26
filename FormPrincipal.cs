@@ -25,10 +25,8 @@ namespace Gerenciador_de_NF_e
             AbrirConsulta();
         }
 
-        private void btnSolicitacao_Click(object sender, EventArgs e)
-        {
-            AbrirSolicitacao();
-        }
+        private void btnSolicitacao_Click(object sender, EventArgs e) => AbrirUc(new UcSolicitação());
+
 
 
 
@@ -56,6 +54,14 @@ namespace Gerenciador_de_NF_e
             UcEdicao uc = new UcEdicao();
             uc.Dock = DockStyle.Fill;
             panelConteudo.Controls.Add(uc);
+        }
+
+        private void AbrirUc(UserControl uc)
+        {
+            panelConteudo.Controls.Clear();
+            uc.Dock = DockStyle.Fill;
+            panelConteudo.Controls.Add(uc);
+            uc.BringToFront();
         }
     }
 }

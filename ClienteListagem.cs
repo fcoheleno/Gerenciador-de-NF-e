@@ -75,16 +75,31 @@ namespace Gerenciador_de_NF_e
 
 
                         };
-                        MessageBox.Show(
-                            "Certificado: " + r.GetString(3) +
-                            "\n\nCnpj: [" + r.GetString(0) + "]" +
-                            "\nUF do banco: [" + r.GetString(2) + "]" +
-                            "\nNSU: [" + ultNsu + "]");
+                        
                     }
                 }
             }
         }
 
+        public void Excluir(string cnpj)
+        {
+            using (FbConnection conn = Conexao.AbrirConexao())
+            {
+                string sql = "DELETE FROM CLIENTES_CREDENCIAIS WHERE CNPJ_CLIENTE = @cnpj";
+                using (FbCommand cmd = new FbCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@cnpj", cnpj);
+
+                    int linhas = cmd.ExecuteNonQuery();
+
+                    if (linhas == 0)
+                    {
+                        throw new Exception("Nenhum cliente foi deletado. Confira o CNPJ");
+                    }
+                }
+
+            }
+        }
 
     }
 }
