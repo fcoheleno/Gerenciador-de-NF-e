@@ -142,5 +142,6 @@ namespace Gerenciador_de_NF_e
         private Guna.UI2.WinForms.Guna2Panel pnlLoading;
         private Label label2;
         private ProgressBar progressBar;
+
     }
 }

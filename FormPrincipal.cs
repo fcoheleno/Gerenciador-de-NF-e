@@ -9,6 +9,14 @@
             // Estes dois botões não têm clique ligado no designer
             guna2Button1.Click += btnPainel_Click;    // "Consultar NF-e"
             guna2Button2.Click += btnEditar_Click;    // "Editar dados"
+            Load += (_, _) =>
+            {
+                var auto = SolicitacaoAutomatica.Instancia;
+                auto.StatusAlterado += (_, _) => Text = "Gerenciador de NF-e  |  " + auto.Status;
+                auto.Iniciar();
+            };
+
+            FormClosing += (_, _) => SolicitacaoAutomatica.Instancia.Parar();
         }
 
         private void MostrarTela(UserControl uc)

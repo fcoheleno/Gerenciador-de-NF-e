@@ -23,6 +23,9 @@ namespace Gerenciador_de_NF_e
             btnAtualizar.Click += BtnAtualizar_Click;
             timerAtualiza.Tick += TimerAtualiza_Tick;
             dgvClientes.CellFormatting += DgvClientes_CellFormatting;
+            Disposed += (_, _) =>
+    SolicitacaoAutomatica.Instancia.RodadaConcluida -= Auto_RodadaConcluida;
+
         }
         private void ConfigurarFiltros()
         {
@@ -229,16 +232,23 @@ namespace Gerenciador_de_NF_e
             {
                 return;
             }
-
             Carregar();
 
+            SolicitacaoAutomatica.Instancia.RodadaConcluida += Auto_RodadaConcluida;
+            SolicitacaoAutomatica.Instancia.ForcarConferencia();
             timerAtualiza.Interval = 30_000;
             timerAtualiza.Start();
         }
 
         private void BtnAtualizar_Click(object? sender, EventArgs e)
         {
-            Carregar();
+            Carregar();  
+            SolicitacaoAutomatica.Instancia.ForcarConferencia();
+        }
+
+        private void Auto_RodadaConcluida(object? sender, EventArgs e)
+        {
+            if (!IsDisposed) Carregar();
         }
 
         private void TimerAtualiza_Tick(object? sender, EventArgs e)
@@ -412,8 +422,7 @@ namespace Gerenciador_de_NF_e
         private List<ClienteStatus> _todos = new();
         private bool _montandoFiltro;
 
-        private TextBox txtNome = null!, txtCnpj = null!,
-                        txtUltima = null!, txtProxima = null!;
+        private TextBox txtNome = null!, txtCnpj = null!;
         private ComboBox cboUf = null!, cboSituacao = null!;
         private Button btnLimpar = null!;
     }

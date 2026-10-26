@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System.CodeDom.Compiler;
+using System.ComponentModel;
 
 namespace Gerenciador_de_NF_e
 {
@@ -8,9 +9,11 @@ namespace Gerenciador_de_NF_e
         private const bool Producao = false;
 
         private readonly ClienteListagem _repositorio = new ClienteListagem(Conexao.ConnectionString);
-        private readonly SolicitacaoRepositorio _solicitacoes = new SolicitacaoRepositorio();
-        private readonly SefazServico _sefazServico = new SefazServico(Producao);
+        private readonly SolicitacaoExecutor _executor = SolicitacaoExecutor.Instancia;
         private Cliente? _clienteAtual;
+
+
+
 
         public UcSolicitação()
         {
@@ -57,59 +60,22 @@ namespace Gerenciador_de_NF_e
                 return;
             }
 
-            // 1) Lê o histórico: regra da espera de 1 hora e último NSU
-            UltimaSolicitacao? ultima;
-            try
-            {
-                ultima = _solicitacoes.BuscarUltima(_clienteAtual.Cnpj);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao ler o histórico de solicitações: " + ex.Message);
-                return;
-            }
-
-            if (ultima?.LiberadaEm is DateTime liberada && DateTime.Now < liberada)
-            {
-                MessageBox.Show(
-                    $"Não é necessário solicitar agora. Nova consulta liberada às {liberada:HH:mm}.",
-                    "Aguarde");
-                return;
-            }
-
-            _clienteAtual.UltNsu = ultima?.Nsu ?? "000000000000000";
-
-            // 2) Consulta a Sefaz
             MostrarLoading(true);
 
             try
             {
-                RespostaSefaz resp = await _sefazServico.SolicitarAsync(_clienteAtual);
+                var res = await _executor.ExecutarAsync(_clienteAtual);
 
-                // 3) Grava no histórico (mantém o NSU anterior se a Sefaz devolveu erro)
-                bool sucesso = resp.CStat is "137" or "138";
-                string nsuGravar = sucesso && !string.IsNullOrWhiteSpace(resp.UltNsu)
-                    ? resp.UltNsu
-                    : _clienteAtual.UltNsu;
-
-                string resultado = $"{resp.CStat} - {resp.Motivo}";
-                if (resp.CStat == "138" && resp.AguardarUmaHora)
-                    resultado += " [aguardar 1h]";
-                if (resultado.Length > 100)
-                    resultado = resultado[..100];
-
-                string aviso = "";
-                try
+                if (res.Pulada)
                 {
-                    _solicitacoes.Registrar(_clienteAtual.Cnpj, resultado, nsuGravar);
-                }
-                catch (Exception ex)
-                {
-                    aviso = "\n\nAtenção: a consulta foi feita, mas não foi possível " +
-                            "gravar o histórico: " + ex.Message;
+                    MessageBox.Show(
+                        $"Não é necessário solicitar agora. Nova consulta liberada às {res.LiberadaEm:HH:mm}.",
+                        "Aguarde");
+                    return;
                 }
 
-                // 4) Mensagem para o usuário
+                var resp = res.Resposta!;
+
                 string texto = $"cStat: {resp.CStat}\n{resp.Motivo}";
                 if (resp.CStat == "138")
                     texto += $"\n\nNotas nesta consulta: {resp.Chaves.Count}";
@@ -119,7 +85,7 @@ namespace Gerenciador_de_NF_e
                 else if (resp.CStat == "138")
                     texto += "\n\nHá mais documentos: solicite novamente para continuar.";
 
-                MessageBox.Show(texto + aviso, "Resposta da SEFAZ");
+                MessageBox.Show(texto + res.AvisoGravacao, "Resposta da SEFAZ");
             }
             catch (Exception ex)
             {
@@ -130,7 +96,6 @@ namespace Gerenciador_de_NF_e
                 MostrarLoading(false);
             }
         }
-
         private void MostrarLoading(bool mostrar)
         {
             pnlLoading.Visible = mostrar;
