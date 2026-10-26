@@ -13,6 +13,9 @@
     <Compile Update="UcConsulta.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UcEdicao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UcPainel.cs">
       <SubType>UserControl</SubType>
     </Compile>

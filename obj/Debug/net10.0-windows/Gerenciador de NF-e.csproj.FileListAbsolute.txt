@@ -80,3 +80,4 @@ C:\Users\2008n\source\repos\Gerenciador-de-NF-e\bin\Debug\net10.0-windows\runtim
 C:\Users\2008n\source\repos\Gerenciador-de-NF-e\obj\Debug\net10.0-windows\Gerencia.E85056FE.Up2Date
 C:\Users\2008n\source\repos\Gerenciador-de-NF-e\obj\Debug\net10.0-windows\Gerenciador de NF-e.genruntimeconfig.cache
 C:\Users\2008n\source\repos\Gerenciador-de-NF-e\obj\Debug\net10.0-windows\ref\Gerenciador de NF-e.dll
+C:\Users\2008n\source\repos\Gerenciador-de-NF-e\obj\Debug\net10.0-windows\Gerenciador_de_NF_e.UcEdicao.resources

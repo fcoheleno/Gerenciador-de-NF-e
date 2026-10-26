@@ -185,7 +185,7 @@
             guna2HtmlLabel1.Text = "Vamos começar!";
             // 
             // FormPrincipal
-            // 
+            //  
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1123, 747);
