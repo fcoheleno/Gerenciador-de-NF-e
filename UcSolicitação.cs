@@ -49,7 +49,7 @@ namespace Gerenciador_de_NF_e
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Black;
-            label1.ForeColor = Color.Teal;
+            label1.ForeColor = Color.RoyalBlue;
             label1.Location = new Point(56, 48);
             label1.Name = "label1";
             label1.Size = new Size(430, 64);

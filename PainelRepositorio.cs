@@ -17,26 +17,37 @@ namespace Gerenciador_de_NF_e
                                    WHERE s2.CNPJ = c.CNPJ_CLIENTE)
                 ORDER BY c.NOME_CLIENTE";
 
-            using var conn = Conexao.AbrirConexao();
-            using var cmd = new FbCommand(sql, conn);
-            using var r = cmd.ExecuteReader();
-
-            while (r.Read())
+            using (var conn = Conexao.AbrirConexao())
             {
-                var c = new ClienteStatus
+                using (var cmd = new FbCommand(sql, conn))
                 {
-                    Cnpj = Texto(r, 0),
-                    Nome = Texto(r, 1),
-                    Uf = Texto(r, 2),
-                    UltimaConsulta = r.IsDBNull(3) ? null : r.GetDateTime(3),
-                    UltimoResultado = Texto(r, 4)
-                };
-                c.Situacao = CalcularSituacao(c);
-                lista.Add(c);
-            }
+                    using (var r = cmd.ExecuteReader())
+                    {
+                        while (r.Read())
+                        {
+                            var c = new ClienteStatus
+                            {
+                                Cnpj = Texto(r, 0),
+                                Nome = Texto(r, 1),
+                                Uf = Texto(r, 2),
+                                UltimaConsulta = r.IsDBNull(3) ? null : r.GetDateTime(3),
+                                UltimoResultado = Texto(r, 4)
+                            };
+                            c.Situacao = CalcularSituacao(c);
+                            lista.Add(c);
+                        }
 
-            return lista;
-        }
+                        return lista;
+                    }
+                }
+                }
+
+
+            }
+            
+            
+
+            
 
         private static SituacaoCliente CalcularSituacao(ClienteStatus c)
         {

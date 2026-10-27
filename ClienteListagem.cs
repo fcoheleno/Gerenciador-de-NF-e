@@ -27,8 +27,6 @@ namespace Gerenciador_de_NF_e
             using var r = cmd.ExecuteReader();
 
             while (r.Read())
-
-            using (FbConnection conn = Conexao.AbrirConexao())
             {
                 lista.Add(new Cliente
                 {
@@ -40,65 +38,6 @@ namespace Gerenciador_de_NF_e
             return lista;
         }
 
-                string sql = @"SELECT CNPJ_CLIENTE, NOME_CLIENTE
-                               FROM CLIENTES_CREDENCIAIS
-                               ORDER BY NOME_CLIENTE";
-
-                using (var cmd = new FbCommand(sql, conn))
-                using (var r = cmd.ExecuteReader())
-                {
-                    while (r.Read())
-                    {
-                        lista.Add(new Cliente
-                        {
-                            Cnpj = r.GetString(0),
-                            Nome = r.GetString(1)
-                        });
-                    }
-                }
-            }
-
-            return lista;
-        }
-
-        public Cliente BuscarPorCnpj(string cnpj)
-        {
-            using (var conn = new FbConnection(Conexao.ConnectionString))
-            {
-                conn.Open();
-
-                string sql = @"SELECT CNPJ_CLIENTE, NOME_CLIENTE, UF_CLIENTE,
-                              CERTIFICADO_CLIENTE, SENHA_CERTIFICADO
-                       FROM CLIENTES_CREDENCIAIS
-                       WHERE CNPJ_CLIENTE = @cnpj";
-                
-
-                using (var cmd = new FbCommand(sql, conn))
-                {
-                    cmd.Parameters.AddWithValue("@cnpj", cnpj);
-
-                    using (var r = cmd.ExecuteReader())
-                    {
-                        
-                        if (!r.Read()) return null;
-
-                        return new Cliente
-                        {
-                            Cnpj = r.GetString(0),
-                            Nome = r.GetString(1),
-                            UfCodigo = r.GetString(2),
-                            CertificadoBytes = r.IsDBNull(3) ? null : (byte[])r["CERTIFICADO_CLIENTE"],
-                            Senha_Certificado = r.GetString(4),
-                            UltNsu = "000000000000000" // provisório
-
-
-                        };
-                        
-                    }
-                }
-            }
-        }
-
         public Cliente? BuscarPorCnpj(string cnpj)
         {
             using var conn = Conexao.AbrirConexao();
@@ -107,6 +46,24 @@ namespace Gerenciador_de_NF_e
                                         CERTIFICADO_CLIENTE, SENHA_CERTIFICADO
                                  FROM CLIENTES_CREDENCIAIS
                                  WHERE CNPJ_CLIENTE = @cnpj";
+
+            using var cmd = new FbCommand(sql, conn);
+            cmd.Parameters.AddWithValue("@cnpj", cnpj);
+            using var r = cmd.ExecuteReader();
+
+            if (!r.Read()) return null;
+
+            return new Cliente
+            {
+                Cnpj = r.GetString(0).Trim(),
+                Nome = r.GetString(1).Trim(),
+                UfCodigo = r.IsDBNull(2) ? "" : r.GetString(2).Trim(),
+                CertificadoBytes = r.IsDBNull(3) ? null : (byte[])r.GetValue(3),
+                Senha_Certificado = r.IsDBNull(4) ? "" : r.GetString(4),
+                UltNsu = "000000000000000"   // o NSU real é lido de SOLICITACOES no UcSolicitação
+            };
+        }
+
         public void Excluir(string cnpj)
         {
             using (FbConnection conn = Conexao.AbrirConexao())
@@ -118,28 +75,12 @@ namespace Gerenciador_de_NF_e
 
                     int linhas = cmd.ExecuteNonQuery();
 
-            using var cmd = new FbCommand(sql, conn);
-            cmd.Parameters.AddWithValue("@cnpj", cnpj);
-            using var r = cmd.ExecuteReader();
                     if (linhas == 0)
                     {
                         throw new Exception("Nenhum cliente foi deletado. Confira o CNPJ");
                     }
                 }
-
-            if (!r.Read()) return null;
             }
-        }
-
-            return new Cliente
-            {
-                Cnpj = r.GetString(0).Trim(),
-                Nome = r.GetString(1).Trim(),
-                UfCodigo = r.IsDBNull(2) ? "" : r.GetString(2).Trim(),
-                CertificadoBytes = r.IsDBNull(3) ? null : (byte[])r.GetValue(3),
-                Senha_Certificado = r.IsDBNull(4) ? "" : r.GetString(4),
-                UltNsu = "000000000000000"   // o NSU real é lido de SOLICITACOES no UcSolicitação
-            };
         }
     }
 }

@@ -77,7 +77,7 @@ namespace Gerenciador_de_NF_e
                 throw new Exception("O cliente não tem certificado cadastrado.");
         var certificado = new X509Certificate2(cliente.CertificadoBytes, cliente.Senha_Certificado);
 
-            X509Certificate2 certificado;
+            //X509Certificate2 certificado;
             try
             {
                 certificado = X509CertificateLoader.LoadPkcs12(

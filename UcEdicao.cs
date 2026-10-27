@@ -163,10 +163,14 @@ namespace Gerenciador_de_NF_e
             }
 
             catch (Exception ex)
-        private void cmbSelecionador_SelectedIndexChanged(object sender, EventArgs e)
-        {
+            {
                 MessageBox.Show("Erro ao excluir: " + ex.Message);
             }
+        }
+        private void cmbSelecionador_SelectedIndexChanged(object sender, EventArgs e)
+        {
+                
+            
 
         }
 

@@ -190,7 +190,7 @@
             btnSelectCertificado.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSelectCertificado.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnSelectCertificado.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnSelectCertificado.FillColor = Color.Teal;
+            btnSelectCertificado.FillColor = Color.MidnightBlue;
             btnSelectCertificado.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSelectCertificado.ForeColor = Color.White;
             btnSelectCertificado.Location = new Point(60, 398);
@@ -408,7 +408,6 @@
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -442,6 +441,6 @@
         private OpenFileDialog openFileDialog1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button btnViewSenha;
-        private Label label2;
+        //private Label label2;
     }
 }
