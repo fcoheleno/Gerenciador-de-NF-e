@@ -133,7 +133,7 @@ namespace Gerenciador_de_NF_e
             {
                 txtSenhaCertificado.PasswordChar = '●';
                 btnViewSenha.Image = Properties.Resources.eye_hidden;
-            }
+        }
 
         }
 
@@ -163,10 +163,11 @@ namespace Gerenciador_de_NF_e
             }
 
             catch (Exception ex)
-            {
+        private void cmbSelecionador_SelectedIndexChanged(object sender, EventArgs e)
+        {
                 MessageBox.Show("Erro ao excluir: " + ex.Message);
             }
-            
+
         }
 
         

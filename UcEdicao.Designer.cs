@@ -241,6 +241,7 @@
             label7.Size = new Size(83, 32);
             label7.TabIndex = 20;
             label7.Text = "Nome";
+            label7.Visible = false;
             // 
             // label8
             // 
@@ -252,6 +253,7 @@
             label8.Size = new Size(234, 32);
             label8.TabIndex = 19;
             label8.Text = "Unidade Federativa";
+            label8.Visible = false;
             // 
             // label9
             // 
@@ -406,16 +408,19 @@
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Guna.UI2.WinForms.Guna2ComboBox cmbSelecionador;
         private Label label1;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
+        private Label label2;
         private Label label3;
         private Label label4;
         private Label label5;

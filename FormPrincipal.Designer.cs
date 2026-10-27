@@ -44,7 +44,7 @@
             btnEditar = new Guna.UI2.WinForms.Guna2Button();
             btnSolicitacao = new Guna.UI2.WinForms.Guna2Button();
             btncertificados = new Guna.UI2.WinForms.Guna2Button();
-            btnCadastrar = new Guna.UI2.WinForms.Guna2Button();
+            btnConsultar = new Guna.UI2.WinForms.Guna2Button();
             panelConteudo = new Guna.UI2.WinForms.Guna2Panel();
             label1 = new Label();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -58,10 +58,11 @@
             guna2Panel1.Controls.Add(btnEditar);
             guna2Panel1.Controls.Add(btnSolicitacao);
             guna2Panel1.Controls.Add(btncertificados);
-            guna2Panel1.Controls.Add(btnCadastrar);
+            guna2Panel1.Controls.Add(btnConsultar);
             guna2Panel1.CustomizableEdges = customizableEdges9;
             guna2Panel1.Dock = DockStyle.Left;
             guna2Panel1.Location = new Point(0, 0);
+            guna2Panel1.Margin = new Padding(3, 4, 3, 4);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges10;
             guna2Panel1.Size = new Size(311, 804);
@@ -86,7 +87,7 @@
             btnEditar.Text = "Editar dados";
             btnEditar.Click += btnEditar_Click;
             // 
-            // btnSolicitacao
+            // guna2Button1
             // 
             btnSolicitacao.BorderRadius = 20;
             btnSolicitacao.CustomizableEdges = customizableEdges3;
@@ -114,16 +115,17 @@
             btncertificados.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btncertificados.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btncertificados.FillColor = Color.Transparent;
-            btncertificados.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold);
+            btncertificados.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btncertificados.ForeColor = Color.White;
             btncertificados.Location = new Point(25, 433);
             btncertificados.Name = "btncertificados";
             btncertificados.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btncertificados.Size = new Size(268, 90);
             btncertificados.TabIndex = 1;
-            btncertificados.Text = "Vizualizar NF-e";
+            btncertificados.Text = "Fazer solicitação";
+            btncertificados.Click += btncertificados_Click;
             // 
-            // btnCadastrar
+            // btnConsultar
             // 
             btnCadastrar.BorderRadius = 20;
             btnCadastrar.CustomizableEdges = customizableEdges7;
@@ -149,7 +151,8 @@
             panelConteudo.Controls.Add(guna2HtmlLabel1);
             panelConteudo.CustomizableEdges = customizableEdges11;
             panelConteudo.Dock = DockStyle.Fill;
-            panelConteudo.Location = new Point(311, 0);
+            panelConteudo.Location = new Point(258, 0);
+            panelConteudo.Margin = new Padding(3, 4, 3, 4);
             panelConteudo.Name = "panelConteudo";
             panelConteudo.ShadowDecoration.CustomizableEdges = customizableEdges12;
             panelConteudo.Size = new Size(974, 804);
@@ -159,22 +162,22 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.DarkGray;
             label1.Location = new Point(192, 311);
             label1.Name = "label1";
-            label1.Size = new Size(311, 90);
+            label1.Size = new Size(234, 64);
             label1.TabIndex = 3;
             label1.Text = "Cltr + C para iniciar \r\numa nova consulta";
             // 
             // guna2HtmlLabel1
             // 
             guna2HtmlLabel1.BackColor = Color.Transparent;
-            guna2HtmlLabel1.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel1.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel1.ForeColor = Color.DarkCyan;
             guna2HtmlLabel1.Location = new Point(192, 195);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(374, 67);
+            guna2HtmlLabel1.Size = new Size(280, 50);
             guna2HtmlLabel1.TabIndex = 0;
             guna2HtmlLabel1.Text = "Vamos começar!";
             // 
@@ -185,10 +188,10 @@
             ClientSize = new Size(1285, 804);
             Controls.Add(panelConteudo);
             Controls.Add(guna2Panel1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FormPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Gerenciador de NF-e";
-            WindowState = FormWindowState.Maximized;
+            Text = "FormPrincipal";
             guna2Panel1.ResumeLayout(false);
             panelConteudo.ResumeLayout(false);
             panelConteudo.PerformLayout();
@@ -200,7 +203,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Panel panelConteudo;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2Button btnCadastrar;
+        private Guna.UI2.WinForms.Guna2Button btnConsultar;
         private Guna.UI2.WinForms.Guna2Button btncertificados;
         private Label label1;
         private Guna.UI2.WinForms.Guna2Button btnSolicitacao;

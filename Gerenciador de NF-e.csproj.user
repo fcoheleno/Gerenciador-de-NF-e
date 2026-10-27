@@ -13,6 +13,15 @@
     <Compile Update="UcCadastro.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UcConsulta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UcEdicao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UcPainel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UcSolicitação.cs">
       <SubType>UserControl</SubType>
     </Compile>
