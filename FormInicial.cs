@@ -12,6 +12,24 @@ namespace Gerenciador_de_NF_e
             FormPrincipal formPrincipal = new FormPrincipal();
             formPrincipal.Show();
             this.Hide();
+            ArredondarPanel();
         }
+
+
+
+        private void pnlLateral_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void ArredondarPanel()
+        {
+            pnlLateral.BorderRadius = 15;
+            pnlLateral.CustomizableEdges.BottomRight = true;
+            pnlLateral.CustomizableEdges.BottomLeft = false;
+            pnlLateral.CustomizableEdges.TopRight = true;
+            pnlLateral.CustomizableEdges.TopLeft = false;
+        }
+        
     }
 }

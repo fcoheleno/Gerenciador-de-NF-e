@@ -145,7 +145,7 @@
             // 
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
-            guna2HtmlLabel2.ForeColor = Color.Teal;
+            guna2HtmlLabel2.ForeColor = Color.DarkSlateBlue;
             guna2HtmlLabel2.Location = new Point(86, 379);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             guna2HtmlLabel2.Size = new Size(63, 34);
@@ -156,7 +156,7 @@
             // 
             guna2HtmlLabel3.BackColor = Color.Transparent;
             guna2HtmlLabel3.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
-            guna2HtmlLabel3.ForeColor = Color.Teal;
+            guna2HtmlLabel3.ForeColor = Color.DarkSlateBlue;
             guna2HtmlLabel3.Location = new Point(86, 211);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             guna2HtmlLabel3.Size = new Size(195, 34);
@@ -167,7 +167,7 @@
             // 
             guna2HtmlLabel4.BackColor = Color.Transparent;
             guna2HtmlLabel4.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
-            guna2HtmlLabel4.ForeColor = Color.Teal;
+            guna2HtmlLabel4.ForeColor = Color.DarkSlateBlue;
             guna2HtmlLabel4.Location = new Point(699, 211);
             guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             guna2HtmlLabel4.Size = new Size(240, 34);
@@ -208,10 +208,10 @@
             btnSelectCertificado.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSelectCertificado.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnSelectCertificado.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnSelectCertificado.FillColor = Color.Teal;
+            btnSelectCertificado.FillColor = Color.MidnightBlue;
             btnSelectCertificado.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSelectCertificado.ForeColor = Color.White;
-            btnSelectCertificado.Location = new Point(65, 644);
+            btnSelectCertificado.Location = new Point(65, 637);
             btnSelectCertificado.Name = "btnSelectCertificado";
             btnSelectCertificado.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnSelectCertificado.Size = new Size(223, 60);
@@ -248,10 +248,10 @@
             btnCadastrar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnCadastrar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnCadastrar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnCadastrar.FillColor = Color.Teal;
+            btnCadastrar.FillColor = Color.ForestGreen;
             btnCadastrar.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCadastrar.ForeColor = Color.White;
-            btnCadastrar.Location = new Point(768, 530);
+            btnCadastrar.Location = new Point(833, 525);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btnCadastrar.Size = new Size(219, 76);
@@ -263,7 +263,7 @@
             // 
             labelUf.BackColor = Color.Transparent;
             labelUf.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
-            labelUf.ForeColor = Color.Teal;
+            labelUf.ForeColor = Color.DarkSlateBlue;
             labelUf.Location = new Point(699, 379);
             labelUf.Name = "labelUf";
             labelUf.Size = new Size(271, 34);
@@ -296,7 +296,7 @@
             // 
             guna2HtmlLabel5.BackColor = Color.Transparent;
             guna2HtmlLabel5.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
-            guna2HtmlLabel5.ForeColor = Color.Teal;
+            guna2HtmlLabel5.ForeColor = Color.DarkSlateBlue;
             guna2HtmlLabel5.Location = new Point(86, 525);
             guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             guna2HtmlLabel5.Size = new Size(128, 34);

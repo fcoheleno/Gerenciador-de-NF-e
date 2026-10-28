@@ -43,7 +43,7 @@ namespace Gerenciador_de_NF_e
             txtCnpj = NovoTexto(painel, "CNPJ", 150);
             cboUf = NovoCombo(painel, "UF", 70);
             cboSituacao = NovoCombo(painel, "Situação", 160);
-          
+
             btnLimpar = new Button
             {
                 Text = "Limpar",
@@ -242,7 +242,7 @@ namespace Gerenciador_de_NF_e
 
         private void BtnAtualizar_Click(object? sender, EventArgs e)
         {
-            Carregar();  
+            Carregar();
             SolicitacaoAutomatica.Instancia.ForcarConferencia();
         }
 
@@ -425,6 +425,11 @@ namespace Gerenciador_de_NF_e
         private TextBox txtNome = null!, txtCnpj = null!;
         private ComboBox cboUf = null!, cboSituacao = null!;
         private Button btnLimpar = null!;
+
+        private void pnlTopo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
 }
