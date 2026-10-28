@@ -53,3 +53,59 @@ C:\Projetos\Gerenciador-de-NF-e\obj\Debug\net10.0-windows\Gerenciador de NF-e.pd
 C:\Projetos\Gerenciador-de-NF-e\obj\Debug\net10.0-windows\Gerenciador de NF-e.genruntimeconfig.cache
 C:\Projetos\Gerenciador-de-NF-e\obj\Debug\net10.0-windows\ref\Gerenciador de NF-e.dll
 C:\Projetos\Gerenciador-de-NF-e\obj\Debug\net10.0-windows\Gerenciador_de_NF_e.UcEdicao.resources
+C:\Users\leand\source\repos\Gerenciador-de-NF-e-novo2610\bin\Debug\net10.0-windows\Gerenciador de NF-e.exe
+C:\Users\leand\source\repos\Gerenciador-de-NF-e-novo2610\bin\Debug\net10.0-windows\Gerenciador de NF-e.deps.json
+C:\Users\leand\source\repos\Gerenciador-de-NF-e-novo2610\bin\Debug\net10.0-windows\Gerenciador de NF-e.runtimeconfig.json
+C:\Users\leand\source\repos\Gerenciador-de-NF-e-novo2610\bin\Debug\net10.0-windows\Gerenciador de NF-e.dll
+C:\Users\leand\source\repos\Gerenciador-de-NF-e-novo2610\bin\Debug\net10.0-windows\Gerenciador de NF-e.pdb
+C:\Users\leand\source\repos\Gerenciador-de-NF-e-novo2610\bin\Debug\net10.0-windows\FirebirdSql.Data.FirebirdClient.dll
+C:\Users\leand\source\repos\Gerenciador-de-NF-e-novo2610\bin\Debug\net10.0-windows\Guna.UI2.dll
+C:\Users\leand\source\repos\Gerenciador-de-NF-e-novo2610\bin\Debug\net10.0-windows\System.Management.dll
+C:\Users\leand\source\repos\Gerenciador-de-NF-e-novo2610\bin\Debug\net10.0-windows\runtimes\win\lib\net7.0\System.Management.dll
+C:\Users\leand\source\repos\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\Gerenciador de NF-e.csproj.AssemblyReference.cache
+C:\Users\leand\source\repos\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\Gerenciador_de_NF_e.Form1.resources
+C:\Users\leand\source\repos\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\Gerenciador_de_NF_e.FormPrincipal.resources
+C:\Users\leand\source\repos\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\Gerenciador_de_NF_e.Properties.Resources.resources
+C:\Users\leand\source\repos\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\Gerenciador_de_NF_e.UcCadastro.resources
+C:\Users\leand\source\repos\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\Gerenciador_de_NF_e.UcEdicao.resources
+C:\Users\leand\source\repos\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\Gerenciador_de_NF_e.UcSolicitação.resources
+C:\Users\leand\source\repos\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\Gerenciador de NF-e.csproj.GenerateResource.cache
+C:\Users\leand\source\repos\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\Gerenciador de NF-e.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\leand\source\repos\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\Gerenciador de NF-e.AssemblyInfoInputs.cache
+C:\Users\leand\source\repos\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\Gerenciador de NF-e.AssemblyInfo.cs
+C:\Users\leand\source\repos\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\Gerenciador de NF-e.csproj.CoreCompileInputs.cache
+C:\Users\leand\source\repos\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\Gerenciador de NF-e.sourcelink.json
+C:\Users\leand\source\repos\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\Gerencia.E85056FE.Up2Date
+C:\Users\leand\source\repos\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\Gerenciador de NF-e.dll
+C:\Users\leand\source\repos\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\refint\Gerenciador de NF-e.dll
+C:\Users\leand\source\repos\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\Gerenciador de NF-e.pdb
+C:\Users\leand\source\repos\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\Gerenciador de NF-e.genruntimeconfig.cache
+C:\Users\leand\source\repos\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\ref\Gerenciador de NF-e.dll
+C:\Gerenciador-de-NF-e-novo2610\bin\Debug\net10.0-windows\Gerenciador de NF-e.exe
+C:\Gerenciador-de-NF-e-novo2610\bin\Debug\net10.0-windows\Gerenciador de NF-e.deps.json
+C:\Gerenciador-de-NF-e-novo2610\bin\Debug\net10.0-windows\Gerenciador de NF-e.runtimeconfig.json
+C:\Gerenciador-de-NF-e-novo2610\bin\Debug\net10.0-windows\Gerenciador de NF-e.dll
+C:\Gerenciador-de-NF-e-novo2610\bin\Debug\net10.0-windows\Gerenciador de NF-e.pdb
+C:\Gerenciador-de-NF-e-novo2610\bin\Debug\net10.0-windows\FirebirdSql.Data.FirebirdClient.dll
+C:\Gerenciador-de-NF-e-novo2610\bin\Debug\net10.0-windows\Guna.UI2.dll
+C:\Gerenciador-de-NF-e-novo2610\bin\Debug\net10.0-windows\System.Management.dll
+C:\Gerenciador-de-NF-e-novo2610\bin\Debug\net10.0-windows\runtimes\win\lib\net7.0\System.Management.dll
+C:\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\Gerenciador de NF-e.csproj.AssemblyReference.cache
+C:\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\Gerenciador_de_NF_e.Form1.resources
+C:\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\Gerenciador_de_NF_e.FormPrincipal.resources
+C:\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\Gerenciador_de_NF_e.Properties.Resources.resources
+C:\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\Gerenciador_de_NF_e.UcCadastro.resources
+C:\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\Gerenciador_de_NF_e.UcEdicao.resources
+C:\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\Gerenciador_de_NF_e.UcSolicitação.resources
+C:\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\Gerenciador de NF-e.csproj.GenerateResource.cache
+C:\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\Gerenciador de NF-e.GeneratedMSBuildEditorConfig.editorconfig
+C:\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\Gerenciador de NF-e.AssemblyInfoInputs.cache
+C:\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\Gerenciador de NF-e.AssemblyInfo.cs
+C:\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\Gerenciador de NF-e.csproj.CoreCompileInputs.cache
+C:\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\Gerenciador de NF-e.sourcelink.json
+C:\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\Gerencia.E85056FE.Up2Date
+C:\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\Gerenciador de NF-e.dll
+C:\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\refint\Gerenciador de NF-e.dll
+C:\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\Gerenciador de NF-e.pdb
+C:\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\Gerenciador de NF-e.genruntimeconfig.cache
+C:\Gerenciador-de-NF-e-novo2610\obj\Debug\net10.0-windows\ref\Gerenciador de NF-e.dll
