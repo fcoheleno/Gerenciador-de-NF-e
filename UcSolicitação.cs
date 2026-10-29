@@ -84,8 +84,6 @@ namespace Gerenciador_de_NF_e
 
             _clienteAtual = _repositorio.BuscarPorCnpj(selecionado.Cnpj);
 
-            _clienteAtual = _repositorio.BuscarPorCnpj(selecionado.Cnpj);
-
             if (_clienteAtual == null ||
                 string.IsNullOrWhiteSpace(_clienteAtual.Cnpj))
             {
@@ -176,11 +174,6 @@ namespace Gerenciador_de_NF_e
 
         private async void btnSolicitar_Click(object sender, EventArgs e)
         {
-
-            var certTeste = new System.Security.Cryptography.X509Certificates.X509Certificate2(
-                _clienteAtual.CertificadoBytes,
-                _clienteAtual.Senha_Certificado);
-
             if (_clienteAtual == null)
             {
                 MessageBox.Show("Selecione um cliente.");
