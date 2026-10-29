@@ -84,7 +84,6 @@
             // guna2Panel1
             // 
             guna2Panel1.BorderColor = Color.Cyan;
-            guna2Panel1.BorderRadius = 5;
             guna2Panel1.CustomBorderColor = Color.MidnightBlue;
             guna2Panel1.CustomBorderThickness = new Padding(0, 0, 0, 5);
             guna2Panel1.CustomizableEdges = customizableEdges1;
@@ -97,9 +96,8 @@
             // pnlLateral
             // 
             pnlLateral.BackColor = Color.MidnightBlue;
-            pnlLateral.BorderRadius = 15;
             pnlLateral.CustomBorderColor = Color.White;
-            pnlLateral.CustomBorderThickness = new Padding(0, 0, 4, 0);
+            pnlLateral.CustomBorderThickness = new Padding(0, 0, 5, 0);
             pnlLateral.CustomizableEdges = customizableEdges3;
             pnlLateral.Dock = DockStyle.Left;
             pnlLateral.Location = new Point(0, 0);

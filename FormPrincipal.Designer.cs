@@ -64,6 +64,8 @@
             guna2Panel1.Controls.Add(btnEditar);
             guna2Panel1.Controls.Add(btnSolicitacao);
             guna2Panel1.Controls.Add(bntConsulta);
+            guna2Panel1.CustomBorderColor = Color.White;
+            guna2Panel1.CustomBorderThickness = new Padding(0, 0, 5, 0);
             guna2Panel1.CustomizableEdges = customizableEdges11;
             guna2Panel1.Dock = DockStyle.Left;
             guna2Panel1.Location = new Point(0, 0);

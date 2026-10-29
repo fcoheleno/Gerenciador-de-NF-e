@@ -11,7 +11,7 @@ namespace Gerenciador_de_NF_e
     public class SolicitacaoExecutor
     {
         // false = homologação; true = produção
-        public const bool Producao = false;
+        public const bool Producao = true;
 
         public static SolicitacaoExecutor Instancia { get; } = new();
 
@@ -39,7 +39,7 @@ namespace Gerenciador_de_NF_e
                     : cliente.UltNsu;
 
                 string resultado = $"{resp.CStat} - {resp.Motivo}";
-                if (resp.CStat == "138" && resp.AguardarUmaHora)
+                if (resp.CStat == "137" && resp.AguardarUmaHora) //137: aguarda uma hora. 138: foi encontado coisa e pode fazer a manifestação e baixar
                     resultado += " [aguardar 1h]";
                 if (resultado.Length > 100)
                     resultado = resultado[..100];

@@ -74,7 +74,7 @@ namespace Gerenciador_de_NF_e
             btnSolicitar.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSolicitar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnSolicitar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnSolicitar.FillColor = Color.Teal;
+            btnSolicitar.FillColor = Color.MidnightBlue;
             btnSolicitar.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSolicitar.ForeColor = Color.White;
             btnSolicitar.Location = new Point(94, 576);

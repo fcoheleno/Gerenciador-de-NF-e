@@ -7,7 +7,7 @@ namespace Gerenciador_de_NF_e
         // ===== Ajustes =====
         private static readonly TimeSpan IntervaloConferencia  = TimeSpan.FromMinutes(2);
         private static readonly TimeSpan PausaSemSolicitacao   = TimeSpan.FromMinutes(30);
-        private static readonly TimeSpan IntervaloEntreClientes = TimeSpan.FromSeconds(5);
+        private static readonly TimeSpan IntervaloEntreClientes = TimeSpan.FromSeconds(10);
         private static readonly TimeSpan EsperaAposFalha       = TimeSpan.FromMinutes(10);
         private const bool AjustarPausaPelaLiberacao = true;  // acorda antes dos 30 min se algum cliente liberar antes
         private const bool TentarNovamenteErros = false;      // cliente com "Erro" volta a ser consultado sozinho?
